@@ -1,6 +1,8 @@
-"use client"
-import { useState } from "react";
+"use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { userAgent } from "next/server";
+import VisitorAnalytics from "./components/VisitorAnalytics";
 
 export default function Home() {
 
@@ -9,6 +11,28 @@ export default function Home() {
   const toggleMobileMenu = () => {
     setMenuOpen(!menuOpen);
   }
+
+  useEffect(() => {
+    const logVisit = async () => {
+      try {
+        // Fetch user-agent and IP
+        const response = await fetch("/api/track", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ip: window.location.hostname,
+            userAgent: navigator.userAgent,
+          }),
+        });
+      } catch (err) {
+        console.error("Failed to log visit:", err);
+      }
+    };
+
+  logVisit();
+}, []);
 
   return (
     <>
@@ -34,7 +58,7 @@ export default function Home() {
                 </ul>
                 <a href="#" className="mobile-toggle" onClick={toggleMobileMenu}>
                     <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+                        <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h14"/>
                     </svg>
                       
                 </a>
@@ -90,7 +114,7 @@ export default function Home() {
                         <img src="./imgs/css_icon.png" alt="CSS" width="128"/>
                         <img src="./imgs/vscode_icon.png" alt="CSS" width="128"/>
                         <img src="./imgs/postgresql_icon.png" alt="CSS" width="128"/>
-                        // Duplicate the images for the banner
+
                         <img src="./imgs/c-original.png" alt="C" width="128"/>
                         <img src="./imgs/cpp_icon.png" alt="Cpp" width="128"/>
                         <img src="./imgs/java.png" alt="Java" width="128"/>
@@ -203,23 +227,7 @@ export default function Home() {
                     </a>
                 </div>
             </section>
-
-            <section className="visitor container">
-                <h2>
-                    <small>
-                        Charts and Data
-                    </small>
-                    Visitor Analytics
-                </h2>
-                <div className="viewport">
-                    <div className="visitor-counter">
-
-                    </div>
-                    <div className="line-graph">
-
-                    </div>
-                </div>
-            </section>
+            <VisitorAnalytics />
         </main>
     </>
   );
