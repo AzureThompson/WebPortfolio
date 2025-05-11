@@ -14,25 +14,28 @@ export default function Home() {
 
   useEffect(() => {
     const logVisit = async () => {
-      try {
-        // Fetch user-agent and IP
-        const response = await fetch("/api/track", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            ip: window.location.hostname,
-            userAgent: navigator.userAgent,
-          }),
-        });
-      } catch (err) {
-        console.error("Failed to log visit:", err);
-      }
-    };
+        const hasVisited = sessionStorage.getItem('hasVisited');
+        if (hasVisited) return;
 
-  logVisit();
-}, []);
+        try {
+            // Fetch user-agent and IP
+            await fetch("/api/track", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                ip: window.location.hostname,
+                userAgent: navigator.userAgent,
+            }),
+          });
+          sessionStorage.setItem('hasVisited', 'true');
+        } catch (err) {
+            console.error("Failed to log visit:", err);
+        }
+    };
+        logVisit();
+    }, []);
 
   return (
     <>

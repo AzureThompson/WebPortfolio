@@ -491,3 +491,47 @@ h3 {
         }
     }
 }
+
+.viewport {
+    padding: 60px 30px;
+    background-color: var(--base-100);
+    border-radius: 30px;
+    margin: 60px auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    @media(max-width: 1024px) {
+        flex-direction: column;
+    }
+    .visitor {
+        flex: 1;
+        max-width: 30%;
+        background-color: var(--yellow-100);
+        padding: 30px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 64px;
+        font-weight: bold;
+        text-align: center;
+
+        @media (max-width: 1024px) {
+            max-width: 100%;
+            font-size: 48px;
+        }
+    }
+    .line {
+        flex: 2;
+        max-width: 70%;
+        background-color: var(--blue-100);
+        padding: 30px;
+        border-radius: 15px;
+
+        @media (max-width: 1024px) {
+            max-width: 100%;
+        }
+    }
+}
