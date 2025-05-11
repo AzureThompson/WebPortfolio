@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -19,7 +20,7 @@
 }
 
 body {
-    font-family: "Opene Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 20px;
@@ -271,5 +272,222 @@ h1 {
     }
     100% {
         transform: translateX(-50%);
+    }
+}
+
+h2 {
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--base-800);
+    padding: 30px;
+    small {
+        display: block;
+        font-weight: 100;
+        font-size: 0.5em;
+        color: var(--base);
+    }
+    @media (max-width: 1024px) {
+        font-size: 48px;
+    }
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: var(--base-800);
+}
+
+.skills {
+    .holder-blue {
+        background-color: var(--blue-100);
+        border-radius: 30px;
+        padding: 30px;
+        display: flex;
+        @media(max-width: 1024px) {
+            flex-direction: column;
+        }
+        .left-column {
+            flex: 1;
+            ul {
+				display: flex;
+				flex-wrap: wrap;
+                list-style-type: none;
+                gap: 10px;
+                margin-right: 100px;
+                margin-bottom: 20px;
+                li {
+                    display: inline-block;
+                    background-color: var(--blue-400);
+                    padding: 10px 20px;
+                    border-radius: 15px;
+                }
+            }
+        }
+        .right-column {
+            flex: 1;
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.work-experience {
+    .jobs {
+        display: flex;
+        gap: 30px;
+        @media(max-width: 1024px) {
+            flex-direction: column;
+        }
+        article {
+            background-color: var(--yellow-100);
+            padding: 30px;
+            border-radius: 30px;
+            flex: 1;
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            div {
+                font-weight: 600;
+                margin-bottom: 5px;
+                color: var(--base-800);
+            }
+            p {
+                margin-bottom: 10px;
+            }
+            figure {
+                width: 100%;
+                padding-top: 56.25%;
+                overflow: hidden;
+                position: relative;
+                border-radius: 15px;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: ease 1s all;
+                }
+                figcaption {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: var(--base-100);
+                    text-align: center;
+                    padding: 5px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: ease 0.3s all;
+                }
+                &:hover {
+                    figcaption {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    img {
+                        scale: 1.1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bento {
+    .bento-grid {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        height: 960px;
+        padding: 30px;
+        @media(max-width: 1024px) {
+            grid-template-rows: repeat(8, 1fr);
+        }
+        @media(max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            height: auto;
+        }
+        .bento-item {
+            padding: 30px;
+            background-color: var(--base-100);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                object-fit: cover;
+                transition: ease 1s all;
+            }
+            &:hover {
+                img {
+                    scale: 1.1;
+                }
+            }
+            @media(max-width: 768px) {
+                height: 240px;
+            }
+            &:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 2;
+                @media(max-width:1024px) {
+                    grid-column: span 2;
+                    grid-row: span 2;
+                }
+            }
+            &:nth-child(2) {
+                grid-column: span 2;
+                grid-row: span 1;
+                @media(max-width:1024px) {
+                    grid-column: span 3;
+                    grid-row: span 2;
+                }
+            }
+            &:nth-child(3) {
+                grid-column: span 1;
+                grid-row: span 1;
+                @media(max-width:1024px) {
+                    grid-column: span 3;
+                    grid-row: span 2;
+                }
+            }
+            &:nth-child(4) {
+                grid-column: span 1;
+                grid-row: span 1;
+                @media(max-width:1024px) {
+                    grid-column: span 2;
+                    grid-row: span 4;
+                }
+            }
+            &:nth-child(5) {
+                grid-column: span 2;
+                grid-row: span 1;
+                @media(max-width:1024px) {
+                    grid-column: span 3;
+                    grid-row: span 2;
+                }
+            }
+            &:nth-child(6) {
+                grid-column: span 5;
+                grid-row: span 2;
+                @media(max-width:1024px) {
+                    grid-column: span 5;
+                    grid-row: span 2;
+                }
+            }
+        }
     }
 }
