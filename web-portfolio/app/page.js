@@ -76,8 +76,12 @@ export default function Home() {
                             Azure Thompson
                         </h1>
                         <p>
-                            Cyber Security and Computer Science graduate who loves to learn new things and experiment with ideas.
-                            <span>I'm interested in embedded systems programming.</span>
+                            A dedicated university student pursuing a Bachelor of Science in Cyber Security and Computer Science at Murdoch University. 
+                            With a deep-rooted passion for technology, I thrive in environments where problem-solving, innovation, and continuous learning are at the forefront.
+                            <span> Beyond tech, I’m a dedicated lifeguard, gym enthusiast, and volunteer youth worker. 
+                                Eager to learn and innovate, I’m always seeking new challenges to grow my skills and contribute meaningfully to the tech community.
+                            </span>
+                            &nbsp;Feel free to check out my projects on GitHub!
                         </p>
                         <div className="call-to-action">
                             <a href="./Azure Thompson - Resume.docx" className="button black">
@@ -143,19 +147,42 @@ export default function Home() {
                     <div className="left-column">
                         <h3>Cyber Security</h3>
                         <ul>
-                            <li>Kali Linux</li>
-                            <li>Hack the Box</li>
+                            <li>Cyber Forensics</li>
+                            <li>Risky User Assessment</li>
+                            <li>Web Security</li>
+                            <li>Network Security</li>
+                            <li>Adversarial Defence</li>
+                            <li>Security Best Practices</li>
+                            <li>Incident Response</li>
+                            <li>Penetration Testing</li>
                         </ul>
                         <h3>Computer Science</h3>
                         <ul>
                             <li>Programming</li>
-                            <li>Hardware Technician</li>
+                            <li>Web Development</li>
+                            <li>Operating Systems</li>
+                            <li>Networking</li>
+                            <li>Software Development</li>
+                            <li>Data Structures & Algorithms</li>
+                            <li>Version Control</li>
+                            <li>Hardware & Embedded Systems</li>
                         </ul>
                     </div>
                     <div className="right-column">
                         <h3>A bit about me</h3>
-                        <p>I'm a uni student...</p>
-                        <p>I do some projects in my spare time.</p>
+                        <p>
+                            My expertise spans across software development, network administration, 
+                            and server management, backed by hands-on experience in building and maintaining PCs, 
+                            homelabs, and custom networks. I’ve crafted my own router using pfSense, implemented ad-blocking DNS solutions, 
+                            and hosted game servers for friends—all driven by my curiosity and love for tinkering with hardware and software.
+                        </p>
+                        <p>
+                            In other areas, I bring a strong work ethic and adaptability from roles in customer service, inventory management, 
+                            and cyber forensics. Whether optimizing workflows, developing secure web applications, or volunteering as a youth leader, 
+                            I approach every challenge with enthusiasm and attention to detail.
+                            When I’m not coding or configuring servers, you’ll find me lifting weights, building PCs, 
+                            or contributing to open-source projects. I’m currently crafting this portfolio to showcase my journey—feel free to explore and connect!
+                        </p>
                     </div>
                 </div>
             </section>

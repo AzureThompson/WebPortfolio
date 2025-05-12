@@ -11,7 +11,7 @@ export async function GET() {
     // Last 12 months
     const monthlyVisits: { month: string; count: number }[] = [];
 
-    for (let i = 11; i >= 0; i--) {
+    for (let i = 6; i >= 0; i--) {
         const date = subMonths(now, i);
         const start = startOfMonth(date);
         const end = endOfMonth(date);
