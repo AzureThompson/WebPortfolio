@@ -8,13 +8,16 @@ import {
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  ArcElement,
+  plugins
 } from 'chart.js';
-import { Line } from 'react-chartjs-2';
+import { Line, Doughnut } from 'react-chartjs-2';
 import { useState, useEffect } from "react";
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+//import { callback } from 'chart.js/dist/helpers/helpers.core';
 
-Chart.register(ChartDataLabels, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+Chart.register(ChartDataLabels, CategoryScale, LinearScale, PointElement, LineElement, ArcElement, Title, Tooltip, Legend);
 
 export default function VisitorAnalytics(){
     const monthNames = [
@@ -39,6 +42,7 @@ export default function VisitorAnalytics(){
         fetchStats();
     }, []);
 
+    // LINE GRAPH DATA
     const chartData = {
         labels: monthlyVisits.map((entry) => {
             const [year, month] = entry.month.split("-");
@@ -90,17 +94,67 @@ export default function VisitorAnalytics(){
         },
     };
 
+    // DOUGHNUT CHART DATA
+    const labels = monthlyVisits.map((entry) => {
+        const [year, month] = entry.month.split("-");
+        return `${monthNames[parseInt(month) - 1]} ${year}`;
+    });
+
+    const dataValues = monthlyVisits.map((entry) => entry.count);
+
+    const averageMonthly = Math.round(
+        dataValues.reduce((sum, val) => sum + val, 0) / (dataValues.length || 1)
+    );
+
+    const doughnutData = {
+        labels,
+        datasets: [
+            {
+                data: dataValues,
+                backgroundColor: [
+                    "#3b82f6", "#10b981", "#f59e0b", "#ef4444", "#6366f1", "#ec4899",
+                    "#22d3ee", "#a855f7", "#14b8a6", "#f97316", "#84cc16", "#eab308"
+                ],
+                borderWidth: 1
+            }
+        ]
+    };
+
+    const doughnutOptions = {
+        plugins: {
+            legend: {
+                position: 'bottom',
+                display: false,
+            },
+            Tooltip: {
+                callbacks: {
+                    label: (context) => `${context.label}: ${context.raw} visits`
+                }
+            },
+            datalabels: {
+                display: false
+            }
+        },
+        cutout: '70%'
+    };
+
     return (
         <section className="analytics container">
             <h2>
                 <small>
-                    Live traffic overview
+                    Visitor Analytics
                 </small>
-                Visitor Analytics
+                Live Webpage Traffic
             </h2>
             <div className="viewport">
-                <div className="visitor counter">
-                    <p>Total Visits: {totalVisits}</p>
+                <div className="visitor doughnut">
+                    <Doughnut data={doughnutData} options={doughnutOptions} plugins={[ChartDataLabels]} />
+                    <div className='doughnut-center'>
+                        <div className="doughnut-average">
+                            {averageMonthly} visits
+                            <br/>Average
+                        </div>
+                    </div>
                 </div>
                 <div className="line graph">
                     <Line data={chartData} options={options} plugins={[ChartDataLabels]} />

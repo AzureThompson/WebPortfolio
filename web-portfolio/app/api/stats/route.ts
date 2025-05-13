@@ -16,7 +16,7 @@ export async function GET() {
         const start = startOfMonth(date);
         const end = endOfMonth(date);
 
-        const count = await prisma.VisitorLog.count({
+        const count = await prisma.visitorLog.count({
             where: {
                 timestamp: {
                     gte: start,

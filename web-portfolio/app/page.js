@@ -92,10 +92,10 @@ export default function Home() {
                             </a>
                         </div>
                         <div className="social-links">
-                            <a href="#">
+                            <a href="https://github.com/AzureThompson" target="_blank">
                                 <img src="./imgs/github_logo.png" alt="GitHub" width="48" />
                             </a>
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/azure-thompson-069253227" target="_blank">
                                 <img src="./imgs/linkedin_logo.png" alt="LinkedIn" width="48" />
                             </a>
                         </div>
@@ -148,10 +148,10 @@ export default function Home() {
                         <h3>Cyber Security</h3>
                         <ul>
                             <li>Cyber Forensics</li>
+                            <li>Security Analysis</li>
                             <li>Risky User Assessment</li>
                             <li>Web Security</li>
                             <li>Network Security</li>
-                            <li>Adversarial Defence</li>
                             <li>Security Best Practices</li>
                             <li>Incident Response</li>
                             <li>Penetration Testing</li>
