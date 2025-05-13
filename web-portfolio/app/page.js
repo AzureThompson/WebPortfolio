@@ -196,35 +196,41 @@ export default function Home() {
                     <article>
                         <figure>
                             <div>
-                                <img src="./imgs/serversetup.png" alt="Workplace - 1" width="100%"/>
-                                <figcaption>Workplace-1</figcaption>
+                                <img src="./imgs/murdoch-logo.jpg" alt="Workplace - 1" width="100%"/>
+                                <figcaption>Murdoch University</figcaption>
                             </div>
                         </figure>
-                        <h3>Job - 1</h3>
-                        <div>2000-20</div>
-                        <p>I worked here...</p>
+                        <h3>Junior Cyber Security Analyst</h3>
+                        <div>2024</div>
+                        <p>
+                            As a Junior Security Analyst, I conducted risky user assessments, asset reporting, and cyber forensics investigations to strengthen our security posture. I also contributed to software development for asset discovery tools, helping improve threat detection and mitigation. Through this role, I gained hands-on experience identifying vulnerabilities and implementing safeguards to protect critical systems.
+                        </p>
                     </article>
                     <article>
                         <figure>
                             <div>
-                                <img src="./imgs/homelab.jpg" alt="Workplace - 2" width="100%"/>
-                                <figcaption>Workplace-2</figcaption>
+                                <img src="./imgs/teamlogo.png" alt="Workplace - 2" width="100%"/>
+                                <figcaption>Murdoch University</figcaption>
                             </div>
                         </figure>
-                        <h3>Job - 2</h3>
-                        <div>2000-20</div>
-                        <p>I worked here...</p>
+                        <h3>Industry Project</h3>
+                        <div>2024</div>
+                        <p>
+                            For my Industry Project at Murdoch University, I enhanced an existing web application by implementing OAuth 2.0 security protocols, writing comprehensive technical documentation, and developing an interactive 3D model viewport. Working collaboratively with my team using Git for version control, I contributed to both frontend functionality and backend security while ensuring our project maintained clean, organized code through disciplined branch management and pull requests.
+                        </p>
                     </article>
                     <article>
                         <figure>
                             <div>
-                                <img src="./imgs/python_roulette.png" alt="Workplace - 3" width="100%"/>
-                                <figcaption>Workplace-3</figcaption>
+                                <img src="./imgs/completehomefiltrationlogo.jpg" alt="Workplace - 3" width="100%"/>
+                                <figcaption>Copmplete Home Filtration</figcaption>
                             </div>
                         </figure>
-                        <h3>Job - 3</h3>
-                        <div>2000-20</div>
-                        <p>I worked here...</p>
+                        <h3>Data Integrity Specialist</h3>
+                        <div>2023</div>
+                        <p>
+                            As a Data Integrity Specialist at Complete Home Filtration, I meticulously verified contract details by cross-referencing submitted documentation with our database entries. My sharp attention to detail ensured 100% accuracy in customer records while developing efficient processes to flag discrepancies. This role strengthened my data validation skills and gave me hands-on experience maintaining clean, reliable databases—a critical foundation for any technical field.
+                        </p>
                     </article>
                 </div>
             </section>
@@ -238,22 +244,28 @@ export default function Home() {
                 </h2>
                 <div className="bento-grid">
                     <a href="#" className="bento-item">
-                        <img src="./imgs/gigachad.jpg" alt="Azure Thompson" width="100%" />
+                        <img src="./imgs/full-stack-1.jpg" alt="Azure Thompson" width="100%" />
+                        <figcaption>Web Portfolio</figcaption>
                     </a>
                     <a href="#" className="bento-item">
-                        <img src="./imgs/gigachad.jpg" alt="Azure Thompson" width="100%" />
+                        <img src="./imgs/home_router.jpg" alt="Azure Thompson" width="100%" />
+                        <figcaption>Custom pfSense Home Router</figcaption>
                     </a>
                     <a href="#" className="bento-item">
-                        <img src="./imgs/gigachad.jpg" alt="Azure Thompson" width="100%" />
+                        <img src="./imgs/pc_hardware.jpg" alt="Azure Thompson" width="100%" />
+                        <figcaption>Personal Server</figcaption>
                     </a>
                     <a href="#" className="bento-item">
-                        <img src="./imgs/gigachad.jpg" alt="Azure Thompson" width="100%" />
+                        <img src="./imgs/kvm.png" alt="Azure Thompson" width="100%" />
+                        <figcaption>Linux Hypervisor</figcaption>
                     </a>
                     <a href="#" className="bento-item">
-                        <img src="./imgs/gigachad.jpg" alt="Azure Thompson" width="100%" />
+                        <img src="./imgs/homelab-v2.jpg" alt="Azure Thompson" width="100%" />
+                        <figcaption>Homelab</figcaption>
                     </a>
                     <a href="#" className="bento-item">
-                        <img src="./imgs/gigachad.jpg" alt="Azure Thompson" width="100%" />
+                        <img src="./imgs/ascii-image.png" alt="Azure Thompson" width="100%" />
+                        <figcaption>Image to ASCII Generator</figcaption>
                     </a>
                 </div>
             </section>
