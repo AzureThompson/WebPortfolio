@@ -35,6 +35,7 @@ a {
 }
 
 header {
+    background-color: white;
     padding-top: 10px;
     padding-bottom: 10px;
     display:flex;
@@ -55,7 +56,7 @@ header {
             align-items: center;
             justify-content: center;
             font-size: 32px;
-            background-color: var(--base-800);
+            background-color: var(--base-100);
             color: var(--base-100);
             height:64px;
             width:64px;

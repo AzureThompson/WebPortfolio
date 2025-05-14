@@ -41,8 +41,12 @@ export default function Home() {
     <>
           <header>
             <a href="#" className="logo-holder">
-                <div className="logo">L</div>
-                <div className="logo-text">Portfolio Website</div>
+                <div className="logo">
+                    <img src="./imgs/logo_icon.png" alt="Logo" width="48px" />
+                </div>
+                <div className="logo-text">
+                    Azure Thompson
+                </div>
             </a>
             <nav>
                 <ul id="menu" className={menuOpen ? "active" : ""}>
