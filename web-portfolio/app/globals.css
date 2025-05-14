@@ -536,6 +536,7 @@ h3 {
         justify-content: center;
         @media (max-width: 1024px) {
             max-width: 100%;
+            height: auto;
             font-size: 48px;
         }
         canvas {
