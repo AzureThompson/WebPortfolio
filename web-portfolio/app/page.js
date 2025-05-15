@@ -227,7 +227,7 @@ export default function Home() {
                         <figure>
                             <div>
                                 <img src="./imgs/completehomefiltrationlogo.jpg" alt="Workplace - 3" width="100%"/>
-                                <figcaption>Copmplete Home Filtration</figcaption>
+                                <figcaption>Complete Home Filtration</figcaption>
                             </div>
                         </figure>
                         <h3>Data Integrity Specialist</h3>
