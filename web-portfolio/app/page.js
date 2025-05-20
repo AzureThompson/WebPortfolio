@@ -106,7 +106,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="hero-yellow">
-                    <img src="./imgs/gigachad.jpg" alt="Azure Thompson" width="100%" />
+                    <img src="./imgs/mugshot_red_cutout.png" alt="Azure Thompson" width="100%" />
                 </div>
             </section>
 
