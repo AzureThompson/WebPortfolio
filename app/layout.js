@@ -2,8 +2,8 @@ import Head from 'next/head'
 import "./globals.css";
 
 export const metadata = {
-  title: "Azure Thompson Website Portfolio",
-  description: "Website to document and display my professional portfolio.",
+  title: "Azure Thompson",
+  description: "Professional Web Portfolio",
 };
 
 export default function RootLayout({ children }) {
