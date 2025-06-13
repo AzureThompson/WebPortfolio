@@ -303,6 +303,82 @@ h3 {
     color: var(--base-800);
 }
 
+.certs {
+    .display-case {
+        background-color: var(--yellow-100);
+        border-radius: 30px;
+        padding: 50px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        @media(max-width: 1024px) {
+            flex-direction: column;
+        }
+        .cert-box {
+            position: relative;
+            background-color: var(--blue-100);
+            padding: 20px;
+            border-radius: 15px;
+            width: 180px;
+            height: auto;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            .cert-icon {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                img {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    object-fit: centain;
+                    transition: ease 0.3s all;
+                    padding: 5px
+                }
+                &:hover {
+                    img {
+                        scale: 1.05;
+                    }
+                }
+            }
+            &.in-progress {
+                opacity: 0.3;
+                transition: opacity 0.3s ease;
+                &:hover{
+                    opacity: 1;
+                }
+                .tooltip {
+                    position: absolute;
+                    width: 80%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -100%);
+                    background-color: rgba(0, 0, 0, 0.6);
+                    color: var(--base-100);
+                    text-align: center;
+                    padding: 6px 10px;
+                    font-weight: bold;
+                    border-radius: 8px;
+                    pointer-events: none;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.3s ease, visibility 0.3s ease;
+                    z-index: 1;
+                }
+                &:hover .tooltip {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            p {
+                font-weight: 600;
+                font-size: medium;
+            }
+        }
+    }
+}
+
 .skills {
     .holder-blue {
         background-color: var(--blue-100);
