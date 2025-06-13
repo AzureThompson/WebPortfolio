@@ -7,12 +7,24 @@ import VisitorAnalytics from "./components/VisitorAnalytics";
 export default function Home() {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [randomSelfie, setRandomSelfie] = useState("");
+
+  const selfie = [
+    "mugshot_black_cutout.png",
+    "mugshot_red_cutout.png",
+    "mugshot_white_cutout.png"
+  ];
 
   const toggleMobileMenu = () => {
     setMenuOpen(!menuOpen);
   }
 
   useEffect(() => {
+    // Select random selfie
+    const randomIndex = Math.floor(Math.random() * selfie.length);
+    setRandomSelfie(selfie[randomIndex]);
+
+    // Log user visit
     const logVisit = async () => {
         const hasVisited = sessionStorage.getItem('hasVisited');
         if (hasVisited) return;
@@ -54,6 +66,9 @@ export default function Home() {
                         <a href="#">Home</a>
                     </li>
                     <li>
+                        <a href="#certs">Certifications</a>
+                    </li>
+                    <li>
                         <a href="#skills">Skills</a>
                     </li>
                     <li>
@@ -88,10 +103,10 @@ export default function Home() {
                             &nbsp;Feel free to check out my projects on GitHub!
                         </p>
                         <div className="call-to-action">
-                            <a href="./Azure Thompson - Resume.docx" className="button black">
+                            <a href="./Azure Thompson - Resume.pdf" target="_blank" className="button black">
                                 View Resume
                             </a>
-                            <a href="mailto:act.productions22@gmail.com" className="button white">
+                            <a href="mailto:act.productions22@gmail.com" target="_blank" className="button white">
                                 Contact Me
                             </a>
                         </div>
@@ -106,7 +121,13 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="hero-yellow">
-                    <img src="./imgs/mugshot_red_cutout.png" alt="Azure Thompson" width="100%" />
+                    {randomSelfie && (
+                        <img 
+                            src={`./imgs/selfies/${randomSelfie}`}
+                            alt="Azure Thompson"
+                            width="100%"
+                        />
+                    )}
                 </div>
             </section>
 
@@ -138,6 +159,28 @@ export default function Home() {
                         <img src="./imgs/css_icon.png" alt="CSS" width="128"/>
                         <img src="./imgs/vscode_icon.png" alt="CSS" width="128"/>
                         <img src="./imgs/postgresql_icon.png" alt="CSS" width="128"/>
+                    </div>
+                </div>
+            </section>
+
+            <section id="certs" className="certs container">
+                <h2>
+                    <small>Degrees and</small>
+                    Certifications
+                </h2>
+                <div className="display-case">
+                    <div className="cert-box">
+                        <div className="cert-icon">
+                            <img src="/imgs/certs/murdoch_university_logo.jpg" alt="Bachelor of IT" />
+                        </div>
+                        <p>Bachelor of IT: Cyber Security and Forensics, Computer Science</p>
+                    </div>
+                    <div className="cert-box in-progress">
+                        <span className="tooltip">In Progress</span>
+                        <div className="cert-icon">
+                            <img src="/imgs/certs/az900.png" alt="AZ-900" />
+                        </div>
+                        <p>AZ-900: Mircosoft Azure Fundamentals</p>
                     </div>
                 </div>
             </section>
