@@ -182,7 +182,15 @@ export default function Home() {
                         </div>
                         <p>AZ-900: Mircosoft Azure Fundamentals</p>
                     </div>
+                    <div className="cert-box in-progress">
+                        <span className="tooltip">In Progress</span>
+                        <div className="cert-icon">
+                            <img src="/imgs/certs/sc200.png" alt="SC-200" />
+                        </div>
+                        <p>SC-200: Security Operations Analyst Associate</p>
+                    </div>
                 </div>
+                <p className="legend">(Transparent tiles indicate ongoing training)</p>
             </section>
 
             <section id="skills" className="skills container">
