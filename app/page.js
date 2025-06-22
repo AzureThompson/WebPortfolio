@@ -169,26 +169,25 @@ export default function Home() {
                     Certifications
                 </h2>
                 <div className="display-case">
-                    <div className="cert-box">
+                    <a className="cert-box">
                         <div className="cert-icon">
                             <img src="/imgs/certs/murdoch_university_logo.jpg" alt="Bachelor of IT" />
                         </div>
                         <p>Bachelor of IT: Cyber Security and Forensics, Computer Science</p>
-                    </div>
-                    <div className="cert-box in-progress">
-                        <span className="tooltip">In Progress</span>
+                    </a>
+                    <a className="cert-box" href="https://learn.microsoft.com/api/credentials/share/en-us/AzureThompson-5642/F8AA7F9F401CB295?sharingId=E2EF258A5F070C6F" target="_blank">
                         <div className="cert-icon">
                             <img src="/imgs/certs/az900.png" alt="AZ-900" />
                         </div>
                         <p>AZ-900: Mircosoft Azure Fundamentals</p>
-                    </div>
-                    <div className="cert-box in-progress">
+                    </a>
+                    <a className="cert-box in-progress">
                         <span className="tooltip">In Progress</span>
                         <div className="cert-icon">
                             <img src="/imgs/certs/sc200.png" alt="SC-200" />
                         </div>
                         <p>SC-200: Security Operations Analyst Associate</p>
-                    </div>
+                    </a>
                 </div>
                 <p className="legend">(Transparent tiles indicate ongoing training)</p>
             </section>
