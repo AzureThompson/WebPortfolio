@@ -91,11 +91,12 @@ export default function Home() {
             <section className="hero container">
                 <div className="hero-blue">
                     <div>
-                        <h1><small>Hi I'm</small>
+                        <h1>
+                            <small>Hi I'm</small>
                             Azure Thompson
                         </h1>
                         <p>
-                            A dedicated university student pursuing a Bachelor of Science in Cyber Security and Computer Science at Murdoch University. 
+                            A recent graduate with a Bachelor of Science in Cyber Security and Computer Science at Murdoch University. 
                             With a deep-rooted passion for technology, I thrive in environments where problem-solving, innovation, and continuous learning are at the forefront.
                             <span> Beyond tech, I’m a dedicated lifeguard, gym enthusiast, and volunteer youth worker. 
                                 Eager to learn and innovate, I’m always seeking new challenges to grow my skills and contribute meaningfully to the tech community.
@@ -144,8 +145,8 @@ export default function Home() {
                         <img src="./imgs/assembly_icon.png" alt="ASM" width="128"/>
                         <img src="./imgs/html_icon.png" alt="HTML" width="128"/>
                         <img src="./imgs/css_icon.png" alt="CSS" width="128"/>
-                        <img src="./imgs/vscode_icon.png" alt="CSS" width="128"/>
-                        <img src="./imgs/postgresql_icon.png" alt="CSS" width="128"/>
+                        <img src="./imgs/vscode_icon.png" alt="VScode" width="128"/>
+                        <img src="./imgs/postgresql_icon.png" alt="PostgreSQL" width="128"/>
 
                         <img src="./imgs/c-original.png" alt="C" width="128"/>
                         <img src="./imgs/cpp_icon.png" alt="Cpp" width="128"/>
@@ -157,8 +158,8 @@ export default function Home() {
                         <img src="./imgs/assembly_icon.png" alt="ASM" width="128"/>
                         <img src="./imgs/html_icon.png" alt="HTML" width="128"/>
                         <img src="./imgs/css_icon.png" alt="CSS" width="128"/>
-                        <img src="./imgs/vscode_icon.png" alt="CSS" width="128"/>
-                        <img src="./imgs/postgresql_icon.png" alt="CSS" width="128"/>
+                        <img src="./imgs/vscode_icon.png" alt="VScode" width="128"/>
+                        <img src="./imgs/postgresql_icon.png" alt="PostgreSQL" width="128"/>
                     </div>
                 </div>
             </section>
@@ -227,7 +228,7 @@ export default function Home() {
                         <p>
                             My expertise spans across software development, network administration, 
                             and server management, backed by hands-on experience in building and maintaining PCs, 
-                            homelabs, and custom networks. I’ve crafted my own router using pfSense, implemented ad-blocking DNS solutions, 
+                            running my homelab, and designing custom networks. I’ve crafted my own router using pfSense, implemented ad-blocking DNS solutions, 
                             and hosted game servers for friends—all driven by my curiosity and love for tinkering with hardware and software.
                         </p>
                         <p>
