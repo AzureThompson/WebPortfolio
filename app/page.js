@@ -205,10 +205,10 @@ export default function Home() {
                             <li>Cyber Forensics</li>
                             <li>Security Analysis</li>
                             <li>Risky User Assessment</li>
-                            <li>Web Security</li>
+                            <li>System Administration</li>
                             <li>Network Security</li>
-                            <li>Security Best Practices</li>
-                            <li>Incident Response</li>
+                            <li>User Access</li>
+                            <li>Microsoft 365</li>
                             <li>Penetration Testing</li>
                         </ul>
                         <h3>Computer Science</h3>
@@ -251,7 +251,20 @@ export default function Home() {
                     <article>
                         <figure>
                             <div>
-                                <img src="./imgs/murdoch-logo.jpg" alt="Workplace - 1" width="100%"/>
+                                <img src="./imgs/PITG.jpg" alt="Workplace - 1" width="100%"/>
+                                <figcaption>Perth IT Group</figcaption>
+                            </div>
+                        </figure>
+                        <h3>IT Support Technician</h3>
+                        <div>2025</div>
+                        <p>
+                            I worked as an IT Support Technician providing Level 1–3 support across end-user systems and core infrastructure. My responsibilities included hardware and software troubleshooting, Active Directory and account management, licensing administration, network and connectivity support, incident logging, documentation, and general system administration. Supporting users in a fast-paced environment while ensuring reliable and secure IT operations.
+                        </p>
+                    </article>
+                    <article>
+                        <figure>
+                            <div>
+                                <img src="./imgs/murdoch-logo.jpg" alt="Workplace - 2" width="100%"/>
                                 <figcaption>Murdoch University</figcaption>
                             </div>
                         </figure>
@@ -264,7 +277,7 @@ export default function Home() {
                     <article>
                         <figure>
                             <div>
-                                <img src="./imgs/teamlogo.png" alt="Workplace - 2" width="100%"/>
+                                <img src="./imgs/teamlogo.png" alt="Workplace - 3" width="100%"/>
                                 <figcaption>Murdoch University</figcaption>
                             </div>
                         </figure>
@@ -272,19 +285,6 @@ export default function Home() {
                         <div>2024</div>
                         <p>
                             For my Industry Project at Murdoch University, I enhanced an existing web application by implementing OAuth 2.0 security protocols, writing comprehensive technical documentation, and developing an interactive 3D model viewport. Working collaboratively with my team using Git for version control, I contributed to both frontend functionality and backend security while ensuring our project maintained clean, organized code through disciplined branch management and pull requests.
-                        </p>
-                    </article>
-                    <article>
-                        <figure>
-                            <div>
-                                <img src="./imgs/completehomefiltrationlogo.jpg" alt="Workplace - 3" width="100%"/>
-                                <figcaption>Complete Home Filtration</figcaption>
-                            </div>
-                        </figure>
-                        <h3>Data Integrity Specialist</h3>
-                        <div>2023</div>
-                        <p>
-                            As a Data Integrity Specialist at Complete Home Filtration, I meticulously verified contract details by cross-referencing submitted documentation with our database entries. My sharp attention to detail ensured 100% accuracy in customer records while developing efficient processes to flag discrepancies. This role strengthened my data validation skills and gave me hands-on experience maintaining clean, reliable databases—a critical foundation for any technical field.
                         </p>
                     </article>
                 </div>
